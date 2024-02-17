@@ -41,7 +41,6 @@ public class BookService {
         }
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
     public Book createBook(Book book) {
         if (isListProfileActive()) {
             return bookDaoRepository.save(book);
